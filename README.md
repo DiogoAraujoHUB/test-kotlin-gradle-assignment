@@ -1,3 +1,3 @@
-# Sample Kotlin assignment for Drop Project
+# Sample Kotlin Gradle assignment for Drop Project
 
 This is a sample assignment skeleton, to be used in Drop Project.
