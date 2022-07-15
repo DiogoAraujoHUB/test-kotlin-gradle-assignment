@@ -14,7 +14,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-test-junit"
 }
 
-tasks.test {
+test {
     // Discover and execute JUnit4-based tests
     useJUnit()
 
