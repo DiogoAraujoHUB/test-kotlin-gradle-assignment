@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.61'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
 }
 
 group 'pt.ulusofona.deisi.dropProject'
@@ -10,27 +10,19 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    implementation "org.jetbrains.kotlin:kotlin-test-junit"
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    //implementation "org.jetbrains.kotlin:kotlin-test-junit"
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }
 
 test {
-    // Discover and execute JUnit4-based tests
-    useJUnit()
+    useJUnitPlatform()
+}
 
-    // show standard out and standard error of the test JVM(s) on the console
-    testLogging.showStandardStreams = true
+compileKotlin {
+    kotlinOptions.jvmTarget = '1.8'
+}
 
-    // listen to events in the test execution lifecycle
-    beforeTest { descriptor ->
-        logger.lifecycle("Running test: " + descriptor)
-    }
-
-    // Skip test failures
-    ignoreFailures = true
-
-    // listen to standard out and standard error of the test JVM(s)
-    onOutput { descriptor, event ->
-        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
-    }
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '1.8'
 }

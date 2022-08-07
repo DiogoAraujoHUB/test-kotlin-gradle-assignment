@@ -1,7 +1,7 @@
 package org.dropProject.samples.sampleKotlinAssignment
 
 fun findMax(numbers: Array<Int>): Int {
-    var max = Int.MIN_VALUE
+    var max = numbers[0]
     for (number in numbers) {
         if (number > max) {
             max = number
