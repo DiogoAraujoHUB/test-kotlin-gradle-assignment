@@ -10,9 +10,8 @@ repositories {
 }
 
 dependencies {
-    //implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    //implementation "org.jetbrains.kotlin:kotlin-test-junit"
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testIimplementation "org.jetbrains.kotlin:kotlin-test-junit"
 }
 
 test {
