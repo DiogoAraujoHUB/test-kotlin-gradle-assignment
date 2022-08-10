@@ -11,19 +11,12 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.jetbrains.kotlin:kotlin-test"
     implementation "org.jetbrains.kotlin:kotlin-test-junit"
 }
 
 test {
     useJUnit()
-
-    // show standard out and standard error of the test JVM(s) on the console
-    testLogging.showStandardStreams = true
-
-    // listen to events in the test execution lifecycle
-    beforeTest { descriptor ->
-        logger.lifecycle("Running test: " + descriptor)
-    }
 
     // Skip test failures
     ignoreFailures = true
