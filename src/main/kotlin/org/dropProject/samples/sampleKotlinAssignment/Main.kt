@@ -8,10 +8,6 @@ fun findMax(numbers: Array<Int>) : Int {
         }
     }
 
-    if (max < 0) {
-        return 0
-    }
-
     return max
 }
 
