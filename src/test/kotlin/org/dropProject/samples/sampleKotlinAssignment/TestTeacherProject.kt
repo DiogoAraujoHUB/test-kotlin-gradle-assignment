@@ -2,6 +2,7 @@ package org.dropProject.samples.sampleKotlinAssignment
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import org.dropProject.samples.sampleKotlinAssignment.*
 
 // in Drop Project, all test classes must begin with "Test"
 class TestTeacherProject {
